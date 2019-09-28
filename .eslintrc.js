@@ -17,7 +17,9 @@ module.exports = {
     jsx: true,  // Allows for the parsing of JSX
   },
   env: {
-    "react-native/react-native": true
+    browser: true,
+    jest: true,
+    "react-native/react-native": true,
   },
   rules: {
     'react/prefer-stateless-function': 0,
@@ -33,6 +35,11 @@ module.exports = {
   },
   globals: { // 全局变量设置
     __DEV__: false // false 表示这个全局变量不允许被重新赋值
+  },
+  settings: {
+    react: {
+      version: 'detect',  // Tells eslint-plugin-react to automatically detect the version of React to use
+    },
   },
 
 };
